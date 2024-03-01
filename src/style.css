@@ -1,0 +1,963 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --Playfair: "Playfair Display", serif;
+  --Roboto: "Roboto", sans-serif;
+  --btc: #ffff;
+  --bgcolor: rgba(0.5, 0.5, 0.5, 0.7);
+  --color: rgb(127, 211, 211);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bgcolor);
+}
+
+li,
+a {
+  font-family: var(--Roboto);
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color);
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+section h1 {
+  color: var(--btc);
+  display: flex;
+  font-size: 35px;
+  font-family: var(--Roboto);
+  justify-content: center;
+  padding-bottom: 64px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.container {
+  padding: 140px 96px;
+}
+section h2 {
+  font-family: var(--Roboto);
+  font-weight: 700;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 94px;
+  background-color: var(--bgcolor);
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar a {
+  position: relative;
+  margin-left: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin-right: 20px;
+}
+/* .navbar-nav ul li {
+} */
+.navbar-nav li {
+  display: inline-block;
+  padding: 0px 10px;
+  transition: opacity 0.02s;
+}
+
+.medI {
+  display: none;
+}
+/* 
+.navbar-nav a::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 2.2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+} */
+
+.navbar-nav a:hover,
+li:hover {
+  color: var(--btc);
+  transform: scale(1.2);
+}
+
+/* .navbar-nav li a:hover::before {
+  width: 100%;
+} */
+.ctn button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+  padding: 16px 32px;
+  font-size: 20px;
+  color: #050303;
+  background: linear-gradient(140deg, #a6a6a6 1.86%, #cdcbcb 44.24%, #5c5c5c 96.52%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease 0s;
+}
+
+.ctn button:hover {
+  color: var(--btc);
+  background: linear-gradient(140deg, #696464 1.86%, #cdc3c3 44.24%, #2b2b2b 96.52%);
+}
+
+/* .ctn button:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  border-bottom: 56px solid rgba(#6b0a0afe, #cdcbcb, #5c5c5c, 0.4);
+  animation: lod 0.4s linear;
+  overflow: hidden;
+}
+
+@keyframes lod {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+} */
+
+/*************************************** HEADER *************************/
+
+header {
+  background-image: url("./asistent/image/Rectangle 82.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#home .content {
+  margin: 80px 500px 105px 202px;
+  display: flex;
+  padding: 40px 40px 48px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+#home .container {
+  padding: 140px 0;
+}
+
+#home .ctn button {
+  width: 150%;
+}
+
+#home .ctn button span {
+  font-size: 22px;
+}
+
+#home .content h1 {
+  font-family: var(--Roboto);
+  color: var(--btc);
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 50px;
+  margin-bottom: 40px;
+  letter-spacing: 1.6px;
+}
+#home .content p {
+  font-family: var(--Roboto);
+  color: var(--btc);
+  font-size: 24px;
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0.48px;
+}
+
+/******************************************** About start *****************************************/
+
+#about {
+  color: var(--btc);
+}
+
+#about .abt-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+#about .container > div:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#about p {
+  font-family: var(--Roboto);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0.4px;
+}
+
+/****************************************       Product     ***************************/
+
+#Product .PRdc {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.PRdc .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 16px 16px 32px;
+}
+
+.PRdc .card img {
+  width: 100%;
+  height: 100%;
+}
+.PRdc .card .lift {
+  display: flex;
+  flex-direction: column;
+  color: var(--btc);
+  font-family: var(--Roboto);
+  letter-spacing: 1.1px;
+  text-transform: capitalize;
+  text-align: center;
+  align-self: stretch;
+  gap: 24px;
+}
+
+.PRdc .card .lift button {
+  width: 100%;
+}
+
+/****************************************** Start Adventage  ***************************************** */
+
+.proekt {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.proekt-11 img {
+  color: #ffff;
+  width: 54px;
+  height: 54px;
+}
+.proekt-11 {
+  border: 1px solid var(--btc);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.proekt-11 h2 {
+  font-family: var(--Roboto);
+  color: var(--btc);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 8px 0;
+  letter-spacing: 0.4px;
+}
+.proekt-11 p {
+  font-family: var(--Roboto);
+  color: var(--btc);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+
+/* <!------------------------------------------ START Subcribe ----------------------- --> */
+
+#Subscribe .contain {
+  margin: 100px 0;
+  padding: 48px 96px;
+  background: rgba(255, 255, 255, 0.1);
+}
+#Subscribe .contain h1 {
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+#Subscribe .sub {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+#Subscribe .sub .icon {
+  padding-right: 15px;
+  font-size: 22px;
+}
+
+/*   <!------------------------------------------ END Subcribe ----------------------- --> */
+
+/* <!------------------------------------------ Belivers Ishonganlar ----------------------- --> */
+
+#Believers .homiylar {
+  display: flex;
+  gap: 25px;
+}
+#Believers .homiylar .homiy {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: auto auto auto;
+  gap: 35px;
+}
+#Believers .homiylar .rasm {
+  overflow: hidden;
+  border-radius: 1.2rem;
+}
+
+#Believers .homiylar img {
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease;
+}
+#Believers .homiylar img:hover {
+  transform: scale(1.1);
+}
+
+/* <!------------------------------------------ END Ishonganlar ----------------------- --> */
+
+.ConNect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.boglanish {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.boglanish p {
+  color: var(--btc);
+  font-family: var(--Roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.5px;
+}
+.boglanish h2 {
+  color: var(--btc);
+  font-family: var(--Roboto);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 56px */
+  letter-spacing: 0.8px;
+}
+.boglanish .aloqa .ctn button {
+  text-transform: capitalize;
+  font-family: var(--Roboto);
+  font-weight: 700;
+}
+.boglanish .aloqa {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.boglanish .aloqa .tel,
+.xabar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.boglanish .aloqa .tel input {
+  width: 100%;
+  padding: 16px;
+  gap: 10px;
+  border-radius: 5px;
+  outline: none;
+  font-family: var(--Roboto);
+  letter-spacing: 0.8px;
+  font-size: 14px;
+}
+
+.boglanish .aloqa textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 16px;
+  gap: 10px;
+  resize: none;
+  border-radius: 5px;
+  outline: none;
+  font-family: var(--Roboto);
+  letter-spacing: 0.8px;
+  font-size: 14px;
+}
+
+.boglanish .aloqa input:hover {
+  box-shadow: 10px 10px 15px 2px rgba(255, 255, 255, 0.2);
+  border: 2px solid #050303;
+}
+.boglanish .aloqa textarea:hover {
+  box-shadow: 10px 10px 15px 2px rgba(255, 255, 255, 0.2);
+  border: 2px solid #050303;
+}
+#conn .phone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#conn .phone p {
+  display: flex;
+  gap: 10px;
+}
+
+#conn .ConNect .Xarita iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ************************************ Footer *************************** */
+
+#footer .contain {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 100px;
+  padding: 40px 96px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#footer .navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#footer .manzil {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#footer .manzil .ctn {
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+#footer .manzil p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#footer .logo {
+  width: 150px;
+}
+
+#footer .navbar {
+  padding: 14px 60px;
+}
+
+#footer .navbar .navbar-nav a {
+  font-size: 16px;
+}
+#footer .manzil .ctn .icon {
+  cursor: pointer;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#footer .manzil .ctn .icon:hover {
+  transform: scale(1.2);
+  color: var(--btc);
+}
+
+/****************************************************************************************** Start MEDIA **************************************************************************************** */
+
+@media only screen and (max-width: 1200px) {
+  /************************************ NAVBAR  START *******************************/
+
+  section h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 16px 75px;
+  }
+
+  .ctn button {
+    padding: 14px 22px;
+    font-size: 18px;
+  }
+  li,
+  a {
+    font-size: 18px;
+  }
+  .navbar a {
+    margin-left: 12px;
+    font-size: 18px;
+  }
+  .navbar-nav a:hover,
+  li:hover {
+    transform: scale(1.1);
+  }
+  .logo {
+    width: 150px;
+  }
+
+  /**********************************************  HEADAER START ****************************/
+  #home .content {
+    margin: 80px 400px 100px 170px;
+    padding: 40px 40px 48px 40px;
+  }
+  .container {
+    padding: 100px 80px;
+  }
+  #home .content h1 {
+    font-size: 60px;
+    line-height: 65px;
+    margin-bottom: 30px;
+    letter-spacing: 1.4px;
+  }
+  #home .ctn button {
+    width: 120%;
+  }
+
+  #home .ctn button span {
+    font-size: 18px;
+  }
+  #home .content p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+  }
+  /******************************************** About **************************/
+
+  #about p {
+    font-family: var(--Roboto);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+  }
+  #about img {
+    width: 100%;
+  }
+  /****************************************       Product     ***************************/
+  #Product .PRdc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .PRdc .card h2 {
+    font-size: 20px;
+  }
+  #adventage img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #adventage h2 {
+    font-size: 20px;
+  }
+
+  #adventage p {
+    font-size: 12px;
+  }
+
+  /**************************************** start Believers  ****************************************/
+
+  #Believers .homiylar {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+  }
+
+  #Believers .homiylar img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /************************************ NAVBAR  START *******************************/
+  .navbar {
+    padding: 16px 55px;
+  }
+
+  .ctn button {
+    padding: 12px 22px;
+  }
+
+  li,
+  a {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+  /**********************************************  HEADAER START ****************************/
+  #home .content {
+    margin: 80px 300px 80px 150px;
+    padding: 35px 35px 40px 35px;
+  }
+  #home .content h1 {
+    line-height: 60px;
+    margin-bottom: 25px;
+  }
+
+  /******************************************** About **************************/
+
+  #about .abt-1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #about .abt-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  #about p {
+    text-align: center;
+
+    line-height: 24px;
+  }
+
+  section h1 {
+    font-size: 27px;
+    padding-bottom: 40px;
+  }
+
+  .PRdc .card h2 {
+    font-size: 18px;
+  }
+
+  #Subscribe .contain {
+    margin: 100px 0;
+    padding: 48px 35px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .boglanish h2 {
+    font-size: 27px;
+  }
+
+  #footer .contain {
+    margin-top: 80px;
+    padding: 35px 90px;
+  }
+
+  #footer .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  #footer .manzil .ctn {
+    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  #footer .logo {
+    width: 120px;
+  }
+
+  #footer .navbar {
+    padding: 14px 40px;
+  }
+
+  #footer .manzil .ctn .fab {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /************************************ NAVBAR  START *******************************/
+  .navbar {
+    padding: 13px 40px;
+  }
+  .medI {
+    display: flex;
+  }
+  .medI i {
+    font-size: 20px;
+  }
+  .medI i:hover {
+    transform: scale(1.2);
+  }
+
+  .logo {
+    width: 130px;
+    height: 45px;
+  }
+
+  .navbar .navbar-nav,
+  .ctn {
+    display: none;
+  }
+  /**********************************************  HEADAER START ****************************/
+
+  #home .ctn {
+    display: flex;
+  }
+  #home .content {
+    margin: 80px 300px 80px 70px;
+    padding: 35px 35px 40px 35px;
+  }
+  #home .content h1 {
+    font-size: 50px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  #home .content p {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.4px;
+  }
+  /*************************************************** About  **************************/
+
+  .container {
+    padding: 100px 30px;
+  }
+  #about img {
+    width: 100%;
+  }
+  #Product .PRdc .ctn {
+    display: flex;
+  }
+  #Product .PRdc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  #Product .PRdc .card-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #Product .PRdc .card-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #Subscribe .contain {
+    margin: 80px 0;
+    padding: 48px 35px;
+  }
+  #Subscribe .ctn {
+    display: flex;
+    justify-content: space-around;
+  }
+  #Subscribe .sub {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  #Believers .homiylar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* flex-wrap: wrap; */
+    gap: 15px;
+  }
+
+  #conn .aloqa .ctn {
+    display: flex;
+  }
+  #footer .contain {
+    margin-top: 80px;
+    padding: 40px 35px;
+  }
+  #footer .manzil .ctn .fab {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /************************************ NAVBAR  START *******************************/
+  .navbar {
+    padding: 12px 30px;
+  }
+  .medI {
+    display: flex;
+  }
+  .medI i {
+    font-size: 20px;
+  }
+  .medI i:hover {
+    transform: scale(1.2);
+  }
+
+  .logo {
+    width: 120px;
+    height: 40px;
+  }
+
+  .navbar .navbar-nav,
+  .ctn {
+    display: none;
+  }
+
+  /**********************************************  HEADAER START ****************************/
+
+  section h1 {
+    font-size: 25px;
+    padding-bottom: 25px;
+  }
+
+  #home .content {
+    margin: 50px 30px 60px 30px;
+    padding: 25px 20px 20px 20px;
+  }
+  #home .content h1 {
+    font-size: 30px;
+    line-height: 25px;
+    margin-bottom: 8px;
+  }
+  #home .content p {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  /*************************************************** About  **************************/
+
+  #home .container {
+    padding: 60px 0;
+  }
+
+  #about p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #Product .PRdc {
+    display: flex;
+  }
+  /* #Product .PRdc .card-2,
+  .card-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  } */
+
+  .PRdc .card h2 {
+    font-size: 14px;
+  }
+
+  #adventage .proekt .proekt-1,
+  .proekt-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #Subscribe .contain h1 {
+    padding-bottom: 25px;
+  }
+  #Subscribe .contain {
+    margin: 75px 0;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  #Subscribe {
+    font-size: 20px;
+  }
+  #Subscribe .sub {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  #Subscribe .ctn button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  #Believers .homiylar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #Believers .homiylar .homiy {
+    display: grid;
+    flex: 100%;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .ConNect {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  #footer .navbar {
+    padding: 14px 8px;
+  }
+  #footer .contain {
+    margin-top: 80px;
+    padding: 35px 25px;
+    gap: 30px;
+  }
+  #footer .manzil p {
+    text-align: right;
+  }
+  #footer .manzil .ctn {
+    gap: 15px;
+  }
+  #Product .ctn {
+    display: flex;
+  }
+}
